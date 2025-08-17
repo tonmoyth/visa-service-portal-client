@@ -1,6 +1,7 @@
 import React from "react";
 import  { useState, useEffect } from "react";
 import { Form, Input, Select, Checkbox, Button, Progress, message } from "antd";
+import { Helmet } from "react-helmet-async";
 
 const { Option } = Select;
 
@@ -42,6 +43,9 @@ const Application = () => {
   };
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-6">
+        <Helmet>
+            <title>Application</title>
+        </Helmet>
       <h1 className="text-2xl font-bold mb-4 text-center">My Application</h1>
 
       {/* Form */}

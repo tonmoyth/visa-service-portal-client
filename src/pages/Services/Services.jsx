@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Input, Select, Card } from "antd";
+import { Helmet } from "react-helmet-async";
 // import Search from "antd/es/transfer/search";
 
 const Services = () => {
@@ -30,6 +31,9 @@ console.log(filter)
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 min-h-screen">
+        <Helmet>
+            <title>Service</title>
+        </Helmet>
       <h1 className="text-3xl font-bold mb-6 text-center">Visa Services</h1>
 
       {/* Search & Filter */}

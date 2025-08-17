@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "antd";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -22,9 +23,11 @@ const Hero = () => {
           Explore visa services, understand the process, and track your
           application progress easily.
         </p>
-        <Button type="primary" size="large">
+      <Link to='/services'>
+          <Button type="primary" size="large">
           Explore Services
         </Button>
+      </Link>
         {/* <a
           href="/services"
           className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition"
