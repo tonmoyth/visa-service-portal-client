@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Tourist Visa",
+    "description": "Explore new countries for a limited time with a tourist visa.",
+    "processingTime": "7-10 business days"
+  },
+  {
+    "id": 2,
+    "name": "Student Visa",
+    "description": "For international students who want to study abroad.",
+    "processingTime": "15-20 business days"
+  },
+  {
+    "id": 3,
+    "name": "Work Visa",
+    "description": "Apply for a work visa to legally work in a foreign country.",
+    "processingTime": "20-30 business days"
+  },
+  {
+    "id": 4,
+    "name": "Business Visa",
+    "description": "Short-term visa for attending meetings, conferences, or trade events.",
+    "processingTime": "5-7 business days"
+  },
+  {
+    "id": 5,
+    "name": "Family Visa",
+    "description": "Join your family members living abroad with a dependent visa.",
+    "processingTime": "25-30 business days"
+  },
+  {
+    "id": 6,
+    "name": "Transit Visa",
+    "description": "Short stay visa while traveling through another country.",
+    "processingTime": "2-5 business days"
+  },
+  {
+    "id": 7,
+    "name": "Medical Visa",
+    "description": "For patients seeking treatment in foreign hospitals.",
+    "processingTime": "10-15 business days"
+  },
+  {
+    "id": 8,
+    "name": "Investor Visa",
+    "description": "For entrepreneurs or investors looking to invest abroad.",
+    "processingTime": "30-45 business days"
+  },
+  {
+    "id": 9,
+    "name": "Exchange Visa",
+    "description": "For cultural or educational exchange program participants.",
+    "processingTime": "12-18 business days"
+  },
+  {
+    "id": 10,
+    "name": "Refugee Visa",
+    "description": "Humanitarian visa for asylum seekers and refugees.",
+    "processingTime": "Varies by case"
+  }
+]
