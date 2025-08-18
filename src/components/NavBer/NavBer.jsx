@@ -94,9 +94,9 @@ const NavBer = () => {
         <div className="md:hidden">
 
           <Space direction="vertical">
-          <Space wrap>
+          <Space wrap >
             <Dropdown menu={{ items }} placement="bottom">
-              <Button className="!bg-[var(--accent)]"><VscThreeBars className="text-white" size={20}/></Button>
+              <Button className="!bg-[var(--primary)] !border-none"><VscThreeBars className="text-white" size={25}/></Button>
             </Dropdown>
           </Space>
         </Space>

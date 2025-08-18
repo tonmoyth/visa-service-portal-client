@@ -50,7 +50,7 @@ const Services = () => {
           //   value={select}
           onChange={(value) => setFilter(value)}
           defaultValue="all"
-          className="w-full md:w-48"
+          className="w-full md:w-48 "
           size="large"
         >
           <Select.Option value="all">All</Select.Option>
