@@ -42,7 +42,7 @@ const Application = () => {
     localStorage.setItem("applicationSteps", JSON.stringify(checkedValues));
   };
   return (
-    <div className="max-w-3xl mx-auto p-6 !bg-[var(--background)] !text-[var(--text)] rounded-xl my-6">
+    <div data-aos="fade-up" className="max-w-3xl mx-auto p-6 !bg-[var(--background)] !text-[var(--text)] rounded-xl my-6">
       <Helmet>
         <title>Application</title>
       </Helmet>
@@ -50,6 +50,7 @@ const Application = () => {
 
       {/* Form */}
       <Form
+      
         form={form}
         layout="vertical"
         onFinish={handleFinish}
@@ -85,7 +86,7 @@ const Application = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" block>
+          <Button type="primary" className="!bg-[var(--primary)]" htmlType="submit" block>
             Save Application
           </Button>
         </Form.Item>
@@ -108,7 +109,7 @@ const Application = () => {
         <h2 className="text-lg font-semibold mb-2">Progress</h2>
         <Progress
           percent={Math.round((completedSteps.length / steps.length) * 100)}
-        
+      
           status="active"
         />
       </div>

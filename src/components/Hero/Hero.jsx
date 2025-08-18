@@ -16,15 +16,15 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-2xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+        <h1 data-aos="zoom-in" className="text-4xl md:text-5xl font-extrabold mb-4">
           Welcome to Visa Service Portal
         </h1>
-        <p className="text-lg md:text-xl mb-6">
+        <p data-aos="zoom-in" className="text-lg md:text-xl mb-6">
           Explore visa services, understand the process, and track your
           application progress easily.
         </p>
       <Link to='/services'>
-          <Button type="primary" className="bg-[var(--background)]" size="large">
+          <Button type="primary" className="!bg-[var(--primary)]" size="large">
           Explore Services
         </Button>
       </Link>

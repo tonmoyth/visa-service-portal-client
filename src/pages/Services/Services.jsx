@@ -40,7 +40,7 @@ const Services = () => {
         <input
           onChange={(e) => setFilter(e.target.value)}
           placeholder="Search"
-          className="w-full border border-gray-300 p-1 px-3 rounded-[10px]"
+          className="w-full border border-gray-300 p-2 px-3 rounded-[10px]"
           type="search"
           name=""
           id=""
@@ -67,7 +67,7 @@ const Services = () => {
             <Card
               key={service.id}
               title={<span className="!text-[var(--text)]"> {service.name} </span>}
-              className="rounded-xl !bg-[var(--background)] !text-[var(--text)] shadow-md transition duration-300"
+              className="rounded-xl  transform border hover:scale-105 !bg-[var(--background)] !text-[var(--text)] shadow-md transition duration-300"
             >
               <p className="!text-[var(--text)]">{service.description}</p>
               <p className="mt-3 text-sm">
