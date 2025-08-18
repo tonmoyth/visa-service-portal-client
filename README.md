@@ -53,5 +53,5 @@ A small, visually appealing, and functional web application to explore visa serv
 ## 🔧 Setup Instructions
 ```bash
 git clone https://github.com/tonmoyth/visa-service-portal-client
-cd visa-service-portal
+cd visa-service-portal-client
 npm install
