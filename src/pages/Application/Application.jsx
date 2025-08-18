@@ -61,7 +61,7 @@ const Application = () => {
           name="name"
           rules={[{ required: true, message: "Please enter your name" }]}
         >
-          <Input placeholder="Enter your name" />
+          <Input placeholder="Enter your name"/>
         </Form.Item>
 
         <Form.Item

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { Button, Dropdown, Space } from "antd";
 import { VscThreeBars } from "react-icons/vsc";
 
@@ -22,37 +22,53 @@ const NavBer = () => {
     <>
       <li>
         {" "}
-        <Link to="/" className="hover:text-gray-300">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "text-gray-300" : "hover:text-gray-300"
+          }
+        >
           Home
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="/services" className="hover:text-gray-300">
+        <NavLink
+          to="/services"
+          className={({ isActive }) =>
+            isActive ? "text-gray-300" : "hover:text-gray-300"
+          }
+        >
           Visa Services
-        </Link>
+        </NavLink>
       </li>
+
       <li>
-        <Link to="/application" className="hover:text-gray-300">
-           Application
-        </Link>
+        <NavLink
+          to="/application"
+          className={({ isActive }) =>
+            isActive ? "text-gray-300" : "hover:text-gray-300"
+          }
+        >
+          Application
+        </NavLink>
       </li>
     </>
   );
 
   const items = [
-  {
-    key: "home",
-    label: <Link to="/">Home</Link>,
-  },
-  {
-    key: "services",
-    label: <Link to="/services">Visa Services</Link>,
-  },
-  {
-    key: "application",
-    label: <Link to="/application"> Application</Link>,
-  },
-];
+    {
+      key: "home",
+      label: <Link to="/">Home</Link>,
+    },
+    {
+      key: "services",
+      label: <Link to="/services">Visa Services</Link>,
+    },
+    {
+      key: "application",
+      label: <Link to="/application"> Application</Link>,
+    },
+  ];
 
   return (
     <nav className="p-4 bg-[var(--primary)] text-white flex justify-between items-center">
@@ -85,21 +101,20 @@ const NavBer = () => {
             <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
           </svg>
         </label>
-     <div className="hidden md:flex">
-         <ul className="flex gap-4 ">
-          {links}
-        </ul>
-     </div>
+        <div className="hidden md:flex">
+          <ul className="flex gap-4 ">{links}</ul>
+        </div>
 
         <div className="md:hidden">
-
           <Space direction="vertical">
-          <Space wrap >
-            <Dropdown menu={{ items }} placement="bottom">
-              <Button className="!bg-[var(--primary)] !border-none"><VscThreeBars className="text-white" size={25}/></Button>
-            </Dropdown>
+            <Space wrap>
+              <Dropdown menu={{ items }} placement="bottom">
+                <Button className="!bg-[var(--primary)] !border-none">
+                  <VscThreeBars className="text-white" size={25} />
+                </Button>
+              </Dropdown>
+            </Space>
           </Space>
-        </Space>
         </div>
       </div>
     </nav>
