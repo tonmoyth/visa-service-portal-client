@@ -24,7 +24,7 @@ const Hero = () => {
           application progress easily.
         </p>
       <Link to='/services'>
-          <Button type="primary" size="large">
+          <Button type="primary" className="bg-[var(--background)]" size="large">
           Explore Services
         </Button>
       </Link>

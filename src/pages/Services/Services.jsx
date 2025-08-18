@@ -7,10 +7,9 @@ const Services = () => {
   const [services, setServices] = useState([]);
   const [filter, setFilter] = useState("all");
   const [filteredServices, setFilteredServices] = useState([]);
-  console.log(filteredServices)
+  console.log(filteredServices);
 
-
-console.log(filter)
+  console.log(filter);
   useEffect(() => {
     fetch("/services.json")
       .then((res) => res.json())
@@ -18,32 +17,39 @@ console.log(filter)
   }, []);
 
   useEffect(() => {
-    if(filter === 'all'){
-        setFilteredServices(services)
+    if (filter === "all") {
+      setFilteredServices(services);
     } else {
       const filtered = services.filter((service) =>
         service.name.toLowerCase().includes(filter.toLowerCase())
       );
-      console.log(filtered)
+      console.log(filtered);
       setFilteredServices(filtered);
     }
-  },[services,filter])
+  }, [services, filter]);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 min-h-screen">
-        <Helmet>
-            <title>Service</title>
-        </Helmet>
+      <Helmet>
+        <title>Service</title>
+      </Helmet>
       <h1 className="text-3xl font-bold mb-6 text-center">Visa Services</h1>
 
       {/* Search & Filter */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
-       <input onChange={(e) => setFilter(e.target.value)} placeholder="Search" className="w-full border border-gray-300 p-1 px-3 rounded-[10px]" type="search" name="" id="" />
+        <input
+          onChange={(e) => setFilter(e.target.value)}
+          placeholder="Search"
+          className="w-full border border-gray-300 p-1 px-3 rounded-[10px]"
+          type="search"
+          name=""
+          id=""
+        />
 
         <Select
           //   value={select}
           onChange={(value) => setFilter(value)}
-            defaultValue="all"
+          defaultValue="all"
           className="w-full md:w-48"
           size="large"
         >
@@ -60,19 +66,18 @@ console.log(filter)
           filteredServices.map((service) => (
             <Card
               key={service.id}
-              title={service.name}
-                variant="outlined"
-              className="shadow-lg rounded-xl hover:shadow-2xl transition duration-300"
+              title={<span className="!text-[var(--text)]"> {service.name} </span>}
+              className="rounded-xl !bg-[var(--background)] !text-[var(--text)] shadow-md transition duration-300"
             >
-              <p className="text-gray-600">{service.description}</p>
-              <p className="mt-3 text-sm text-gray-500">
+              <p className="!text-[var(--text)]">{service.description}</p>
+              <p className="mt-3 text-sm">
                 ⏱ Processing Time:{" "}
                 <span className="font-medium">{service.processingTime}</span>
               </p>
             </Card>
           ))
         ) : (
-          <p className="text-center col-span-3 text-gray-500">
+          <p className="text-center col-span-3 ">
             No services found
           </p>
         )}

@@ -17,7 +17,7 @@ const NavBer = () => {
   };
 
   return (
-    <nav className="p-4 bg-blue-600 text-white flex justify-between items-center">
+    <nav className="p-4 bg-[var(--accent)] text-white flex justify-between items-center">
       <h1 className="text-xl font-bold">Visa Service Portal</h1>
 
       <div className="flex gap-6 justify-center items-center">

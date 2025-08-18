@@ -1,5 +1,5 @@
 import React from "react";
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Form, Input, Select, Checkbox, Button, Progress, message } from "antd";
 import { Helmet } from "react-helmet-async";
 
@@ -42,10 +42,10 @@ const Application = () => {
     localStorage.setItem("applicationSteps", JSON.stringify(checkedValues));
   };
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-6">
-        <Helmet>
-            <title>Application</title>
-        </Helmet>
+    <div className="max-w-3xl mx-auto p-6 !bg-[var(--background)] !text-[var(--text)] rounded-xl my-6">
+      <Helmet>
+        <title>Application</title>
+      </Helmet>
       <h1 className="text-2xl font-bold mb-4 text-center">My Application</h1>
 
       {/* Form */}
@@ -56,7 +56,7 @@ const Application = () => {
         className="mb-6"
       >
         <Form.Item
-          label="Name"
+          label={<span className="!text-[var(--text)]">Name</span>}
           name="name"
           rules={[{ required: true, message: "Please enter your name" }]}
         >
@@ -64,7 +64,7 @@ const Application = () => {
         </Form.Item>
 
         <Form.Item
-          label="Passport Number"
+          label={<span className="!text-[var(--text)]">Passport Numbe</span>}
           name="passport"
           rules={[{ required: true, message: "Please enter passport number" }]}
         >
@@ -72,7 +72,7 @@ const Application = () => {
         </Form.Item>
 
         <Form.Item
-          label="Visa Type"
+          label={<span className="!text-[var(--text)]">Visa Type</span>}
           name="visaType"
           rules={[{ required: true, message: "Please select visa type" }]}
         >
@@ -94,11 +94,13 @@ const Application = () => {
       {/* Application Steps */}
       <div className="mb-4">
         <h2 className="text-lg font-semibold mb-2">Application Steps</h2>
-        <Checkbox.Group
-          options={steps}
-          value={completedSteps}
-          onChange={onStepChange}
-        />
+        <Checkbox.Group value={completedSteps} onChange={onStepChange}>
+          {steps.map((step) => (
+            <Checkbox key={step} value={step}>
+              <span className="!text-[var(--text)]">{step}</span>
+            </Checkbox>
+          ))}
+        </Checkbox.Group>
       </div>
 
       {/* Progress */}
@@ -106,6 +108,7 @@ const Application = () => {
         <h2 className="text-lg font-semibold mb-2">Progress</h2>
         <Progress
           percent={Math.round((completedSteps.length / steps.length) * 100)}
+        
           status="active"
         />
       </div>

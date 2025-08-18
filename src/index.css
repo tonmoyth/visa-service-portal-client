@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+:root[data-theme="light"] {
+  --text: #0d0a16;
+  --background: #f8f6fc;
+  --primary: #6133d5;
+  --secondary: #9e7df0;
+  --accent: #804ff9;
+}
+:root[data-theme="dark"] {
+  --text: #edeaf6;
+  --background: #040308;
+  --primary: #572acb;
+  --secondary: #2f0f80;
+  --accent: #3706b1;
+}

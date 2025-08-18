@@ -1,12 +1,57 @@
-# React + Vite
+# Visa Service Portal (Mini Web App)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small, visually appealing, and functional web application to explore visa services, view process steps, and track application progress.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 1. Home Page
+- Modern hero section with an attractive banner.
+- Short description of the portal.
+- Navigation menu to other pages.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Visa Services Page
+- Fetches visa services from a (`services.json`).
+- Shows service name, description, and estimated processing time.
+- Search and filter functionality.
+- Uses **Ant Design Cards** + **Tailwind CSS** for a clean grid layout.
+- Dark mode support.
+
+### 3. My Application Page
+- Form for applicant details:
+  - Name
+  - Passport Number
+  - Visa Type (Dropdown)
+- Track application steps with checkboxes.
+- Progress bar showing completion percentage.
+- All data saved in **localStorage** for persistence.
+- Dark mode compatible.
+
+### 4. Design & UX
+- Fully responsive for mobile, tablet, and desktop.
+- Clean, modern layout.
+- Dark mode toggle supported.
+- Smooth transitions for better UX.
+
+### 5. Performance & SEO
+- Optimized images (if using Next.js, Next/Image component can be used).
+- SEO tags included (`<title>`, `<meta description>`, `<meta author>`).
+
+---
+
+## ⚡ Technologies Used
+- **React.js** (JavaScript)
+- **Tailwind CSS**
+- **Ant Design**
+- **React Router DOM** (for page navigation)
+- **localStorage** (to save application progress)
+- Optional: JSON file as mock API for visa services
+
+---
+
+## 🔧 Setup Instructions
+```bash
+git clone https://github.com/tonmoyth/visa-service-portal-client
+cd visa-service-portal
+npm install
